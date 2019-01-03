@@ -16,6 +16,7 @@
     "react/forbid-prop-types": "off",
     "max-len": "off",
     "no-undef": "off",
-    "global-require": "off"
+    "global-require": "off",
+    "func-names": "off"
   }
 }

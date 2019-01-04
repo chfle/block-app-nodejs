@@ -20,3 +20,10 @@ test('should show the app logo in the header', async () => {
 
   expect(text).toEqual('Blogster');
 });
+
+test('click login, should start oauth flow', async () => {
+  await page.click('.right a');
+
+  const url = await page.url();
+  expect(url).toMatch(/accounts\.google\.com/);
+});

@@ -17,6 +17,9 @@
     "max-len": "off",
     "no-undef": "off",
     "global-require": "off",
-    "func-names": "off"
+    "func-names": "off",
+    "prefer-destructuring": "off",
+    "import/no-extraneous-dependencies": ["error", {"packageDir": ",./some-dir/"}],
+    "yield-star-spacing": "off"
   }
 }

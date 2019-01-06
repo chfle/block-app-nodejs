@@ -19,7 +19,7 @@
     "global-require": "off",
     "func-names": "off",
     "prefer-destructuring": "off",
-    "import/no-extraneous-dependencies": ["error", {"packageDir": ",./some-dir/"}],
+    "import/no-extraneous-dependencies": ["error", {"packageDir": "./package.json/"}],
     "yield-star-spacing": "off"
   }
 }

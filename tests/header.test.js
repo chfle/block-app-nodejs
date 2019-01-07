@@ -12,13 +12,13 @@ afterEach(async () => {
 });
 
 test('should show the app logo in the header', async () => {
-  const text = await page.$eval('a.brand-logo', el => el.innerHTML);
+  const text = await page.getContentOf('a.brand-logo');
 
   expect(text).toEqual('Blogster');
 });
 
 test('should show login button', async () => {
-  const loginButton = await page.$eval('.right a', el => el.innerHTML);
+  const loginButton = await page.getContentOf('.right a');
   expect(loginButton).toEqual('Login With Google');
 });
 
@@ -31,7 +31,7 @@ test('click login, should start oauth flow', async () => {
 
 test('show logout button when signed in', async () => {
   await page.login();
-  const logout = await page.$eval('a[href="/auth/logout"]', el => el.innerHTML);
+  const logout = await page.getContentOf('a[href="/auth/logout"]');
 
   expect(logout).toEqual('Logout');
 });

@@ -9,7 +9,7 @@
   "parser": "babel-eslint",
   "rules": {
     "no-console": "off",
-    "strict": "off",
+    "strict": "warn",
     "no-unused-vars": "off",
     "no-underscore-dangle": "off",
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],

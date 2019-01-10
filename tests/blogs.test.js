@@ -4,7 +4,7 @@ let page;
 
 beforeEach(async () => {
   page = await Page.build();
-  await page.goto('localhost:3000');
+  await page.goto('http://localhost:3000');
 });
 
 afterEach(async () => {
@@ -74,7 +74,7 @@ describe('When not logged in', async () => {
   ];
 
   test('User should not can do any request', async () => {
-    const results = await page.exexRequests(actions);
+    const results = await page.execRequests(actions);
 
     results.forEach((result) => {
       expect(result).toEqual({ error: 'You must log in!' });

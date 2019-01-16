@@ -14,7 +14,7 @@ class BlogFormReview extends Component {
   }
 
   onFileChange(e) {
-    this.setState({ file: e.target.value.files[0] });
+    this.setState({ file: e.target.files[0] });
   }
 
   onSubmit(event) {
@@ -68,6 +68,7 @@ class BlogFormReview extends Component {
           onChange={this.onFileChange}
           type="file"
           accept="image/*"
+          name="image"
         />
 
         {this.renderButtons()}

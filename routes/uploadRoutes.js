@@ -15,8 +15,11 @@ module.exports = (app) => {
 
     s3.getSignedUrl('putObject', {
       Bucket: 'simple-blog-bucket',
-      ContentType: 'jpeg',
+      ContentType: 'image/jpeg',
       Key: key,
+      signatureVersion: 'v4',
+      region: 'eu-central-1',
+      endpoint: 's3-eu-central-1.amazonaws.com',
     }, (err, url) => {
       res.send({ key, url });
     });

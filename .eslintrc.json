@@ -22,6 +22,7 @@
     "yield-star-spacing": "off",
     "no-underscore-dangle": "off",
     "react/prop-types": "off",
-    "react/button-has-type": "off"
+    "react/button-has-type": "off",
+    "no-unused-expressions": "off"
   }
 }
